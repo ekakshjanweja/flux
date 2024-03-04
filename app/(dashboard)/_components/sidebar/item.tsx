@@ -33,7 +33,7 @@ export const Item = ({ id, name, imageUrl }: ItemProps) => {
             fill
             onClick={onClick}
             className={cn(
-              "rounded-md cursor-pointer opacity-75 hover:opacity-100 transition",
+              "rounded-full cursor-pointer opacity-40 hover:opacity-100 transition",
               isActive && "opacity-100"
             )}
           />

@@ -21,14 +21,16 @@ export const NewButton = () => {
               align="start"
               alignOffset={18}
             >
-              <button className="h-full w-full rounded-md  flex items-center justify-center bg-violet-500 opacity-60 hover:opacity-100 transition duration-200">
-                <Plus className="text-foreground" />
+              <button className="h-full w-full rounded-full  flex items-center justify-center bg-violet-500 opacity-80 hover:opacity-100 transition duration-200">
+                <Plus className="text-neutral-50 h-5 w-5" />
               </button>
             </Hint>
           </div>
         </DialogTrigger>
-        <DialogContent>
-          <CreateOrganization />
+        <DialogContent className="p-0 bg-transparent border-none max-w-[350px]">
+          <div className="absolute left-full top-5">
+            <CreateOrganization />
+          </div>
         </DialogContent>
       </Dialog>
     </>

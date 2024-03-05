@@ -21,7 +21,7 @@ export const EmptyOrganisation = () => {
         <div className="flex items-center justify-start text-2xl font-semibold ">
           Welcome to
           <div className="flex items-center gap-x-2 pl-1">
-            <span className="italic group-hover:dark:text-violet-300  group-hover:text-violet-500 group-hover:translate-x-2 transition duration-500">
+            <span className="italic group-hover:dark:text-blue-400  group-hover:text-blue-500 group-hover:translate-x-2 transition duration-500">
               flux Φ
             </span>
           </div>

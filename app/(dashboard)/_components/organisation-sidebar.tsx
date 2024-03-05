@@ -15,10 +15,10 @@ export const OrganisationSidebar = () => {
       <div className="bg-white dark:bg-neutral-950 h-full px-6 hidden lg:flex flex-col space-y-6 w-[200px] pl-5 pt-5">
         <Link href="/">
           <div className="flex items-center gap-x-2 group">
-            <span className="text-2xl bg-neutral-200 dark:bg-neutral-800 group-hover:bg-violet-500 transition rounded-full flex items-center justify-center px-2 group-hover:text-neutral-50 duration-500">
+            <span className="text-2xl bg-neutral-200 dark:bg-neutral-800 group-hover:bg-blue-500 transition rounded-full flex items-center justify-center px-2 group-hover:text-neutral-50 duration-500">
               Φ
             </span>
-            <span className="italic text-xl group-hover:dark:text-violet-300  group-hover:text-violet-500 group-hover:translate-x-2 transition duration-500">
+            <span className="italic text-xl group-hover:dark:text-blue-300  group-hover:text-blue-500 group-hover:translate-x-2 transition duration-500">
               flux
             </span>
           </div>

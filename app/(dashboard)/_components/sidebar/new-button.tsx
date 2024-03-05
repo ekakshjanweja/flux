@@ -21,7 +21,7 @@ export const NewButton = () => {
               align="start"
               alignOffset={18}
             >
-              <button className="h-full w-full rounded-full  flex items-center justify-center bg-violet-500 opacity-80 hover:opacity-100 transition duration-200">
+              <button className="h-full w-full rounded-full  flex items-center justify-center bg-blue-500 opacity-80 hover:opacity-100 transition duration-200">
                 <Plus className="text-neutral-50 h-5 w-5" />
               </button>
             </Hint>

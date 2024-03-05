@@ -18,6 +18,14 @@ export const Footer = ({
   onClick,
   disabled,
 }: FooterProps) => {
+  const handleClick = (
+    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    event.stopPropagation();
+    event.preventDefault();
+    onClick();
+  };
+
   return (
     <>
       <div className="relative bg-blue-50 dark:bg-blue-950 group-hover:bg-pink-50 group-hover:dark:bg-pink-950 dark:bg-opacity-30 group-hover:dark:bg-opacity-50 bg-opacity-30 group-hover:bg-opacity-50  p-3 transition duration-500">
@@ -25,7 +33,7 @@ export const Footer = ({
           <p className="truncate max-w-sm text-lg">{title}</p>
           <button
             disabled={disabled}
-            onClick={onClick}
+            onClick={handleClick}
             className="text-muted-foreground hover:text-foreground transition duration-500 top-3 right-3"
           >
             <Star
@@ -36,7 +44,7 @@ export const Footer = ({
               )}
             />
           </button>
-        </div>{" "}
+        </div>
         <p className="text-muted-foreground group-hover:text-foreground truncate transition duration-500">
           {authorLabel}, {createdAtLabel}
         </p>

@@ -5,6 +5,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ConvexClientProvider } from "@/providers/convex-client-provider";
 import { Toaster } from "@/components/ui/sonner";
+import { DialogProvider } from "@/providers/dialog-provider";
 
 //const inter = Inter({ subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Toaster />
+            <DialogProvider />
             {children}
           </ThemeProvider>
         </ConvexClientProvider>

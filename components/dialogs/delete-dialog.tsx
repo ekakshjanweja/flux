@@ -10,11 +10,11 @@ import {
 } from "../ui/dialog";
 
 export const DeleteDialog = () => {
-  const { isOpen, onCloseRenameDialog, initialValues } = useRenameDialog();
+  const { isOpen, onClose, initialValues } = useRenameDialog();
 
   return (
     <>
-      <Dialog open={isOpen} onOpenChange={onCloseRenameDialog}>
+      <Dialog open={isOpen} onOpenChange={onClose}>
         <DialogContent>
           <DialogHeader>
             <DialogTitle>Delete Board?</DialogTitle>

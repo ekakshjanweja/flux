@@ -6,6 +6,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { ConvexClientProvider } from "@/providers/convex-client-provider";
 import { Toaster } from "@/components/ui/sonner";
 import { DialogProvider } from "@/providers/dialog-provider";
+import { Suspense } from "react";
+import { Loading } from "@/components/auth/loading";
 
 //const inter = Inter({ subsets: ["latin"] });
 
@@ -24,18 +26,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={geistSans.className}>
-        <ConvexClientProvider>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <Toaster />
-            <DialogProvider />
-            {children}
-          </ThemeProvider>
-        </ConvexClientProvider>
+        <Suspense fallback={<Loading />}>
+          <ConvexClientProvider>
+            <ThemeProvider
+              attribute="class"
+              defaultTheme="dark"
+              enableSystem
+              disableTransitionOnChange
+            >
+              <Toaster />
+              <DialogProvider />
+              {children}
+            </ThemeProvider>
+          </ConvexClientProvider>
+        </Suspense>
       </body>
     </html>
   );
